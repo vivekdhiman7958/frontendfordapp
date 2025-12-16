@@ -1,0 +1,161 @@
+/* style.css - DARK MODE THEME */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e; /* Deep dark background */
+    color: #e6e6fa; /* Light purple/white text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Start from the top */
+    min-height: 100vh;
+    padding-top: 40px;
+}
+
+.container {
+    background: #2a2a4a; /* Slightly lighter container background */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    max-width: 800px;
+    width: 90%;
+    margin-bottom: 40px; /* Space at the bottom */
+}
+
+.title {
+    color: #92e6f0; /* Accent color 1 (Cyan) */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #e6e6fa; /* Light text for section headings */
+}
+
+/* BUTTONS */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Standard Blue */
+    color: white;
+}
+.btn-primary:hover:not(:disabled) { background-color: #0056b3; }
+
+.btn-action {
+    background-color: #4CAF50; /* Green (Action) */
+    color: white;
+}
+.btn-action:hover:not(:disabled) { background-color: #388E3C; }
+
+.btn-warning {
+    background-color: #ffc107; /* Yellow (Warning) */
+    color: #1a1a2e;
+}
+.btn-warning:hover:not(:disabled) { background-color: #e0a800; }
+
+/* DATA DISPLAY */
+.state-section, .action-section, .manager-section, .profile-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #4a4a6b; /* Dark border */
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.card {
+    background: #3e3e68; /* Card background */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #92e6f0; /* Accent color 1 */
+    font-size: 1em;
+}
+
+.big-number {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #e6e6fa;
+}
+
+.address-text {
+    font-family: monospace;
+    word-wrap: break-word;
+    font-size: 0.9em;
+    color: #c9c9ff;
+}
+
+/* STATUS & WALLET */
+.wallet-status {
+    text-align: right;
+    margin-bottom: 20px;
+}
+.address-display {
+    color: #a0a0ff;
+}
+
+.status-bar {
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #1a1a2e;
+}
+.error { background-color: #f8d7da; color: #721c24; }
+.success { background-color: #d4edda; color: #155724; }
+.loading { background-color: #fff3cd; color: #856404; }
+.default { background-color: #4a4a6b; color: #e6e6fa; } /* Default dark status bar */
+
+/* ADMIN */
+.manager-section {
+    border: 2px solid #ffc107;
+    background-color: #4a4a6b;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* LOADING SPINNER */
+.loading-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #92e6f0; /* Accent spinner color */
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

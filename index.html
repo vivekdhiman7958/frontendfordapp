@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web3 Decentralized Lottery</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">✍️ Decentralized Lottery DApp</h1>
+            <div id="wallet-info" class="wallet-status">
+                <p id="connect-status">Wallet Not Connected</p>
+                <p id="account-address" class="address-display"></p>
+                <button id="connectBtn" class="btn btn-primary">Connect Wallet</button>
+            </div>
+        </header>
+
+        <section class="state-section">
+            <h2>Current Lottery State</h2>
+            <div class="data-grid">
+                <div class="card">
+                    <h3>Lottery Pool</h3>
+                    <p id="contract-balance" class="big-number">-- ETH</p>
+                </div>
+                <div class="card">
+                    <h3>Current Players</h3>
+                    <p id="players-count" class="big-number">--</p>
+                </div>
+                <div class="card">
+                    <h3>Last Winner</h3>
+                    <p id="last-winner" class="address-text small-text">Awaiting first draw...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile-section" class="profile-section hidden">
+            <h2>👤 My Profile</h2>
+            <div class="data-grid">
+                <div class="card">
+                    <h3>Entry Status</h3>
+                    <p id="entry-status" class="big-number">--</p>
+                </div>
+                <div class="card">
+                    <h3>Total Winnings</h3>
+                    <p id="total-winnings" class="big-number">-- ETH</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="action-section">
+            <h2>Enter Lottery (0.01 ETH)</h2>
+            <button id="enterBtn" class="btn btn-action" disabled>
+                <span id="enter-text">Enter Now</span>
+                <span class="loading-spinner hidden"></span>
+            </button>
+        </section>
+
+        <section id="manager-section" class="manager-section hidden">
+            <h2>🔐 Manager Controls</h2>
+            <p class="manager-note">You are the manager: <span id="manager-address" class="address-text"></span></p>
+            <button id="pickBtn" class="btn btn-warning">
+                <span id="pick-text">Pick Winner!</span>
+                <span class="loading-spinner hidden"></span>
+            </button>
+        </section>
+
+        <div id="status-bar" class="status-bar">
+            <p id="status-message">Welcome to the DApp.</p>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
